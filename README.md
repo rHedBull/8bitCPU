@@ -25,9 +25,13 @@ And the 3D animated models are beautiful!!!
 - chip_2 = SN74LS08N, and gates   
 - chip_3 = SN74LS04N, inverter   
 - chip_4 = SN74LS32N, or gates   
-   
+
+### [schematic](https://github.com/rHedBull/8bitComputer/blob/main/PDFs/ClockModule_schematic.pdf)
+
 ![clockModule_annotated](https://user-images.githubusercontent.com/65466619/124142808-d93e1a80-da8a-11eb-98af-4ac568ef1955.jpg)
 
-### function
-this combination of a mono- and astable timer results in a bistable timer. While the monostable timer is mainly used to let the computer run step by step which helps debugging, the astable timer [ClockModule_schematic.pdf](https://github.com/rHedBull/8bitComputer/files/6749040/ClockModule_schematic.pdf)
-generates a continuous stream of equally logic high voltage, in equal time intervalls, to ensure the different computer parts run in concurency and the instructions are timed correctly.
+### functionality
+this combination of a mono- and astable timer results in a bistable timer. While the monostable timer is mainly used to let the computer run step by step which helps debugging, the astable timer generates a continuous stream of equally logic high voltage, in equal time intervalls, to ensure the different computer parts run in concurency and the instructions are timed correctly.
+
+### design
+Each chip_1 contains 2 555 timers, in connection with resistors and capacitors they produce the clock signals. The potentiometer controlls the frequency at which the astable timer flashes. chip_2, chip_3, chip_4 make up the small logic circuits which regulates if the mono- or astable timer's signal is relayed to the computer. This can be changed by switching the toggle switch.
