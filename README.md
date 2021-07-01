@@ -17,5 +17,13 @@ you can find it [here](https://gist.github.com/ThomasBuchinger/92f848d017fa94d7c
 the schematics you can find in this repo are all created using KiCad. Ben Eater did create those already, but since my parts are slightly different than his,   
 I redesigned the circuits myself following his example. I can only recommend to try it yourself since one can learn a lot and maybe eventually even solder the CPU on a PCB board using the in KiCad generated gerber files.   
 And the 3D animated models are beautiful!!!   
-## Clock Module
 
+
+## Clock Module
+### parts
+- chip_1 = TLC556CN , timer
+- chip_2 = SN74LS08N, and gates   
+- chip_3 = SN74LS04N, inverter   
+- chip_4 = SN74LS32N, or gates   
+   
+![clockModule_annotated](https://user-images.githubusercontent.com/65466619/124142808-d93e1a80-da8a-11eb-98af-4ac568ef1955.jpg)
