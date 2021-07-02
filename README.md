@@ -35,3 +35,23 @@ this combination of a mono- and astable timer results in a bistable timer. While
 
 ### design
 Each chip_1 contains 2 555 timers, in connection with resistors and capacitors they produce the clock signals. The potentiometer controlls the frequency at which the astable timer flashes. chip_2, chip_3, chip_4 make up the small logic circuits which regulates if the mono- or astable timer's signal is relayed to the computer. This can be changed by switching the toggle switch.
+
+## A, B register
+### parts
+- chip_5 = SN74LS245N, 8 bus tranceiver
+- chip_6 = SN74LS173AN, 4 bit d - type register
+
+
+### [schematic](https://github.com/rHedBull/8bitComputer/blob/main/PDFs/8BitRegister_schematic.pdf)
+
+### functionality
+Both registers can store a 8 bit character to use them in computations later on.
+   
+### design
+A and B register have the exact same structure. The 2 x chip_6 receive the incoing data from the bus and can output them either back to the bus or to the ALU.
+
+![registers](https://user-images.githubusercontent.com/65466619/124265443-f7148980-db35-11eb-97b1-b52d162ae1c7.jpg)
+
+## ALU
+algorithmic logic unit
+
