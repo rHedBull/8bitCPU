@@ -44,14 +44,30 @@ Each chip_1 contains 2 555 timers, in connection with resistors and capacitors t
 
 ### [schematic](https://github.com/rHedBull/8bitComputer/blob/main/PDFs/8BitRegister_schematic.pdf)
 
+![registers](https://user-images.githubusercontent.com/65466619/124265443-f7148980-db35-11eb-97b1-b52d162ae1c7.jpg)
+
 ### functionality
 Both registers can store a 8 bit character to use them in computations later on.
    
 ### design
 A and B register have the exact same structure. The 2 x chip_6 receive the incoing data from the bus and can output them either back to the bus or to the ALU.
 
-![registers](https://user-images.githubusercontent.com/65466619/124265443-f7148980-db35-11eb-97b1-b52d162ae1c7.jpg)
 
 ## ALU
 algorithmic logic unit
+
+### parts
+- chip_5 = SN74LS245N, 8 bus tranceiver
+- chip_7 = 74HC283, 4-bit binary full adder
+- chip_8 = SN74LS86AN, 4 XOR gates
+
+### [schematic]()
+
+![ALU](https://user-images.githubusercontent.com/65466619/124729527-cd31dd00-df10-11eb-9863-3ed1c7b27583.jpg)
+
+### functionality
+This ALU design automatically adds the number stored in the B register to the number in the A register and stores it in it 8 bit tranceiver, to output it onto the bus if directed to. It can also subtract the number of the B register from the A register's number, by converting the B register's number to a 2 complements negative number and then adding it to A.
+
+
+
 
