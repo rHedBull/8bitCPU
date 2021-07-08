@@ -44,7 +44,7 @@ Each chip_1 contains 2 555 timers, in connection with resistors and capacitors t
 
 ### [schematic](https://github.com/rHedBull/8bitComputer/blob/main/PDFs/8BitRegister_schematic.pdf)
 
-![registers](https://user-images.githubusercontent.com/65466619/124265443-f7148980-db35-11eb-97b1-b52d162ae1c7.jpg)
+![registers_annotated](https://user-images.githubusercontent.com/65466619/124937198-73600e80-e007-11eb-9e28-75d06fefbf74.jpg)
 
 ### functionality
 Both registers can store a 8 bit character to use them in computations later on.
@@ -63,7 +63,7 @@ algorithmic logic unit
 
 ### [schematic]()
 
-![ALU](https://user-images.githubusercontent.com/65466619/124729527-cd31dd00-df10-11eb-9863-3ed1c7b27583.jpg)
+![ALU](https://user-images.githubusercontent.com/65466619/124937229-7bb84980-e007-11eb-8f87-c2017fa9c0e1.jpg)
 
 ### functionality
 This ALU design automatically adds the number stored in the A and B register and  can then output it onto the bus via the 8 bit bus tranceiver (chip_5) if directed to. It can also subtract the number of the B register from the A register's number, by converting the B register's number to a 2 complements negative number and then adding it to A.
