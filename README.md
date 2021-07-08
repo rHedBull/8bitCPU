@@ -50,7 +50,7 @@ Each chip_1 contains 2 555 timers, in connection with resistors and capacitors t
 Both registers can store a 8 bit character to use them in computations later on.
    
 ### design
-A and B register have the exact same structure. The 2 x chip_6 receive the incoing data from the bus and can output them either back to the bus or to the ALU.
+A and B register have the exact same structure. The 2 x 4 bit d - type register (chip_6) receive the incoming data from the bus and can output them either back to the bus or to the ALU.
 
 
 ## ALU
@@ -66,7 +66,55 @@ algorithmic logic unit
 ![ALU](https://user-images.githubusercontent.com/65466619/124729527-cd31dd00-df10-11eb-9863-3ed1c7b27583.jpg)
 
 ### functionality
-This ALU design automatically adds the number stored in the B register to the number in the A register and stores it in it 8 bit tranceiver, to output it onto the bus if directed to. It can also subtract the number of the B register from the A register's number, by converting the B register's number to a 2 complements negative number and then adding it to A.
+This ALU design automatically adds the number stored in the A and B register and  can then output it onto the bus via the 8 bit bus tranceiver (chip_5) if directed to. It can also subtract the number of the B register from the A register's number, by converting the B register's number to a 2 complements negative number and then adding it to A.
+
+### design
+the blue cables coming from the 2 registers directly feed into the ALU. The actual addition happens in the  2 4-bit binary full adder (chip_7), but since the number from B must sometimes be converted into 2's complement the blue cables are first connected to the XOR gates (chip_8).
+
+## Program counter
+
+### parts
+- chip_9 = SN74LS161N, 4 bit binary counter
+- chip_5 = SN74LS245N, 8 bus tranceiver
+
+### [schematic]()
+
+### functionality
+Here, the computer counts the executed programs, since the last startup or reset. The green bit value is going to be loaded into the MAR will therefore be the next address which the ram will read after the computer has executed the current programm/ instruction.
+
+### design
+The clock signal from the main clock module is passed through 4  4bit binary counter with a count rate of 4:1. So every 4 clock signals the program counter will count one up. Since we only have 4 micro instructions per programm this is enough. 
+
+## RAM
+random acces memory, includes MAR (memory address register)
+
+### parts
+
+### [schematic]()
+
+### functionality
+
+### design
+
+## output register
+
+### parts
+
+### [schematic]()
+
+### functionality
+
+### design
+
+## control logic
+
+### parts
+
+### [schematic]()
+
+### functionality
+
+### design
 
 
 
