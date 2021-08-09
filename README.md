@@ -89,6 +89,9 @@ The clock signal from the main clock module is passed through 4  4bit binary cou
 random acces memory, includes MAR (memory address register)
 
 ### parts
+- chip_10 = 74LS157, Quad 2-Line to 1-Line Data Selectors/Multiplexers
+- chip_5 = SN74LS245N, 8 bus tranceiver
+- chip_11 = 74LS00, Quad 2-Input NAND Gate
 
 ### [schematic]()
 
