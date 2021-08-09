@@ -92,6 +92,7 @@ random acces memory, includes MAR (memory address register)
 - chip_10 = 74LS157, Quad 2-Line to 1-Line Data Selectors/Multiplexers
 - chip_5 = SN74LS245N, 8 bus tranceiver
 - chip_11 = 74LS00, Quad 2-Input NAND Gate
+- chip_6 = SN74LS173AN, 4 bit d - type register
 
 ### [schematic]()
 
