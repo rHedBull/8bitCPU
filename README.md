@@ -25,7 +25,6 @@ And the 3D animated models are beautiful!!!
 - chip_2 = SN74LS08N, and gates   
 - chip_3 = SN74LS04N, inverter   
 - chip_4 = SN74LS32N, or gates
-- chip_12 = UT6264C, 8K X 8 BIT LOW POWER CMOS SRAM
 
 ### [schematic](https://github.com/rHedBull/8bitComputer/blob/main/PDFs/ClockModule_schematic.pdf)
 
@@ -90,14 +89,16 @@ The clock signal from the main clock module is passed through 4  4bit binary cou
 random acces memory, includes MAR (memory address register)
 
 ### parts
-- chip_10 = 74LS157, Quad 2-Line to 1-Line Data Selectors/Multiplexers
 - chip_5 = SN74LS245N, 8 bus tranceiver
-- chip_11 = 74LS00, Quad 2-Input NAND Gate
 - chip_6 = SN74LS173AN, 4 bit d - type register
+- chip_10 = 74LS157, Quad 2-Line to 1-Line Data Selectors/Multiplexers
+- chip_11 = 74LS00, Quad 2-Input NAND Gate
+- chip_12 = UT6264C, 8K X 8 BIT LOW POWER CMOS SRAM
 
 ### [schematic]()
 
 ### functionality
+The switch in the upper left corner switches between execution- and programming-mode. In programming, you can manipulate the the  8 stored bits in the SRAM unit (chip_12) using the 4 address bits and the only partly connected 10 dip switch to programm instructions into the RAM. In executin mode the 4 address bits will come via the bus from the program counter.
 
 ### design
 
