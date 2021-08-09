@@ -24,7 +24,8 @@ And the 3D animated models are beautiful!!!
 - chip_1 = TLC556CN , timer
 - chip_2 = SN74LS08N, and gates   
 - chip_3 = SN74LS04N, inverter   
-- chip_4 = SN74LS32N, or gates   
+- chip_4 = SN74LS32N, or gates
+- chip_12 = UT6264C, 8K X 8 BIT LOW POWER CMOS SRAM
 
 ### [schematic](https://github.com/rHedBull/8bitComputer/blob/main/PDFs/ClockModule_schematic.pdf)
 
